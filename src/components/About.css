@@ -13,9 +13,10 @@
 .about-card {
     padding: 3rem;
     text-align: justify;
+    /* Good for desktop */
     border: 2px solid var(--primary-color);
-    /* Purple border like in the image */
     background: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
 }
 
 .about-description {
@@ -56,4 +57,30 @@
     background: #333;
     color: white;
     transform: translateY(-3px);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .about-card {
+        padding: 1.5rem;
+        /* Less padding on mobile */
+        text-align: left;
+        /* No justify on mobile to avoid gaps */
+    }
+
+    .about-description {
+        font-size: 1rem;
+        /* Slightly smaller font */
+        line-height: 1.6;
+    }
+
+    .skills-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        /* Stack skills on mobile */
+    }
 }
