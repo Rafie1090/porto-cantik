@@ -64,8 +64,8 @@
     .about-card {
         padding: 1.5rem;
         /* Less padding on mobile */
-        text-align: left;
-        /* No justify on mobile to avoid gaps */
+        text-align: left !important;
+        /* Force left align */
     }
 
     .about-description {

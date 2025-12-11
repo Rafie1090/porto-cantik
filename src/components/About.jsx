@@ -1,6 +1,6 @@
 import React from 'react';
 import { portfolioData } from '../data';
-import { MaskedText, StaggerContainer, StaggerItem } from './Animations';
+import { MaskedText, StaggerContainer, StaggerItem, FadeIn } from './Animations';
 import './About.css';
 
 const About = () => {
@@ -14,9 +14,9 @@ const About = () => {
 
             <div className="about-container">
                 <div className="about-card glass">
-                    <MaskedText delay={0.2}>
+                    <FadeIn delay={0.2}>
                         <p className="about-description">{description}</p>
-                    </MaskedText>
+                    </FadeIn>
                 </div>
 
                 <div className="skills-container">
