@@ -1,0 +1,96 @@
+.projects-section {
+    background-color: transparent;
+}
+
+.projects-list {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.project-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 6rem;
+}
+
+.project-text {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.project-role {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #555;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.project-title {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    line-height: 1.3;
+}
+
+.project-desc-box {
+    padding: 2rem;
+    border: 2px solid #333;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.project-desc-box p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    margin: 0;
+}
+
+.project-visuals {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.doc-placeholder {
+    width: 200px;
+    height: 280px;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    font-weight: 600;
+    transform: rotate(-5deg);
+    transition: transform 0.3s;
+}
+
+.doc-placeholder:nth-child(2) {
+    transform: rotate(5deg);
+}
+
+.doc-placeholder:hover {
+    transform: rotate(0) scale(1.05);
+    z-index: 10;
+}
+
+.project-img-main {
+    width: 100%;
+    max-width: 300px;
+    /* Adjust size for phone mockup */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.project-img-main:hover {
+    transform: scale(1.02);
+}

@@ -1,0 +1,204 @@
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    gap: 4rem;
+}
+
+/* Decorative background elements */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    right: -10%;
+    width: 50vw;
+    height: 50vw;
+    background: radial-gradient(circle, var(--secondary-color) 0%, transparent 70%);
+    opacity: 0.4;
+    border-radius: 50%;
+    filter: blur(60px);
+    z-index: -1;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    left: -10%;
+    width: 60vw;
+    height: 60vw;
+    background: radial-gradient(circle, #e0c3fc 0%, transparent 70%);
+    opacity: 0.4;
+    border-radius: 50%;
+    filter: blur(60px);
+    z-index: -1;
+}
+
+.hero-content {
+    flex: 1;
+    text-align: left;
+    z-index: 1;
+}
+
+.hero-title-wrapper,
+.hero-name-wrapper {
+    overflow: hidden;
+    /* Essential for masked reveal */
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    margin: 0;
+    color: #2c3e50;
+    letter-spacing: 0.2rem;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.hero-name {
+    font-family: 'Great Vibes', cursive;
+    font-style: italic;
+    font-size: 6rem;
+    margin: -0.5rem 0 2rem 0;
+    background: linear-gradient(45deg, #333, #555);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 400;
+}
+
+/* Fallback if Great Vibes isn't loaded */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.hero-socials {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    /* Thinner line */
+    flex-wrap: wrap;
+}
+
+.hero-socials a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    text-transform: capitalize;
+    padding: 0.5rem 1.2rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    color: #333;
+    text-decoration: none;
+}
+
+.hero-socials a:hover {
+    background: #1a1a1a;
+    color: #fff;
+    border-color: #1a1a1a;
+    transform: translateY(-2px);
+}
+
+.hero-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Soft Blob behind the image */
+.hero-image-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background: radial-gradient(circle, rgba(255, 209, 216, 0.6) 0%, rgba(230, 215, 255, 0.4) 100%);
+    border-radius: 50%;
+    filter: blur(50px);
+    z-index: -1;
+    animation: blobPulse 6s ease-in-out infinite;
+}
+
+@keyframes blobPulse {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+.hero-image {
+    max-width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+    /* Premium Drop Shadow */
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15));
+    transition: transform 0.5s ease;
+}
+
+.hero-image:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 968px) {
+    .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 6rem;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-socials {
+        justify-content: center;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-name {
+        font-size: 4rem;
+    }
+
+    .hero-image {
+        max-height: 50vh;
+        max-width: 80%;
+    }
+
+    .social-text {
+        display: none;
+        /* Hide text on mobile for cleaner look */
+    }
+
+    .hero-socials a {
+        padding: 0.8rem;
+        /* Circle button on mobile */
+    }
+}

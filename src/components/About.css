@@ -1,0 +1,59 @@
+.about-section {
+    background-color: transparent;
+}
+
+.about-container {
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.about-card {
+    padding: 3rem;
+    text-align: justify;
+    border: 2px solid var(--primary-color);
+    /* Purple border like in the image */
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.about-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #444;
+    margin: 0;
+}
+
+.skills-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    text-align: left;
+    margin-bottom: 2rem;
+    color: #222;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-pill {
+    background: transparent;
+    border: 2px solid #333;
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.skill-pill:hover {
+    background: #333;
+    color: white;
+    transform: translateY(-3px);
+}

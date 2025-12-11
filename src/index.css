@@ -1,0 +1,89 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #1a1a1a;
+  --primary-color: #d4a373;
+  --secondary-color: #f3f4f6;
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  font-family: 'Outfit', sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color-scheme: light;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  color: var(--text-color);
+  overflow-x: hidden;
+
+  /* Modern Mesh Gradient - Soft & Premium */
+  background-color: #ffffff;
+  background-image:
+    radial-gradient(at 0% 0%, rgba(255, 209, 216, 0.5) 0px, transparent 50%),
+    /* Soft Pink */
+    radial-gradient(at 100% 0%, rgba(196, 224, 255, 0.5) 0px, transparent 50%),
+    /* Soft Blue */
+    radial-gradient(at 100% 100%, rgba(255, 238, 201, 0.5) 0px, transparent 50%),
+    /* Soft Cream */
+    radial-gradient(at 0% 100%, rgba(230, 215, 255, 0.5) 0px, transparent 50%);
+  /* Soft Lavender */
+  background-attachment: fixed;
+  /* Keeps the gradient elegant while scrolling */
+  background-size: 100% 100%;
+}
+
+#root {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display', serif;
+  color: #2c3e50;
+  letter-spacing: -0.01em;
+}
+
+a {
+  font-weight: 500;
+  color: var(--text-color);
+  text-decoration: inherit;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+/* Utilities */
+.section {
+  padding: 8rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  /* Heavier blur for premium glass effect */
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+}

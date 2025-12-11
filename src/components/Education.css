@@ -1,0 +1,65 @@
+.education-section {
+    background-color: transparent;
+}
+
+.education-content {
+    max-width: 1000px;
+    width: 100%;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 3rem;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+}
+
+.edu-header {
+    margin-bottom: 3rem;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 2rem;
+}
+
+.uni-info h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #222;
+}
+
+.uni-info h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    color: #444;
+}
+
+.gpa {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.org-list h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.org-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.org-list li {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    padding-left: 1.5rem;
+    border-left: 3px solid var(--accent-color);
+}
+
+.org-list li strong {
+    display: block;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.org-list li span {
+    color: #666;
+}

@@ -1,0 +1,86 @@
+.publications-section {
+    background-color: transparent;
+}
+
+.publications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.pub-card {
+    padding: 1.5rem;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.6);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.pub-card:hover {
+    transform: translateY(-5px);
+}
+
+.pub-image {
+    height: 200px;
+    background: #eee;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    font-weight: 600;
+}
+
+.pub-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.pub-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+.pub-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+    line-height: 1.4;
+}
+
+.pub-journal {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.pub-link {
+    margin-top: auto;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.pub-footer {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+.pub-footer a {
+    color: #333;
+    text-decoration: underline;
+    font-weight: 600;
+}

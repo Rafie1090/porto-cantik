@@ -1,0 +1,41 @@
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.experience-card {
+    padding: 2.5rem;
+    text-align: left;
+    border: 2px solid #333;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    transition: transform 0.3s;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.experience-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.experience-card .period {
+    display: inline-block;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.experience-card p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #444;
+}
